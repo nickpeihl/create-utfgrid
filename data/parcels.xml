@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#b8dee6" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="bounds">-123.305054,48.391826,-122.726898,48.82947</Parameter>
+  <Parameter name="center">-123.0198,48.607,12</Parameter>
+  <Parameter name="format">png</Parameter>
+  <Parameter name="interactivity_layer">parcel</Parameter>
+  <Parameter name="interactivity_fields">PIN,District,District_N,Acres,TA_ID,Owner,Address_1,Address_2,Address_3,City,State,Zip,Short_Lega,Legal_Acre,Taxable_Ac,Tax_Code,Tax_Area,Land_Value,Appraised_,Curruse_Va,Bldg_Value,Use_Code,Tax_Status,Sale_date,Sale_Price</Parameter>
+  <Parameter name="minzoom">12</Parameter>
+  <Parameter name="maxzoom">14</Parameter>
+  <Parameter name="name"><![CDATA[San Juan County Parcel Grid]]></Parameter>
+  <Parameter name="template"><![CDATA[{{#__location__}}{{/__location__}}{{#__teaser__}}{{{PIN}}}{{/__teaser__}}{{#__full__}}{{{PIN}}}
+{{{District}}}-{{{District_N}}}
+{{{Acres}}}
+{{{TA_ID}}}
+{{{Owner}}}
+{{{Address_1}}} {{{Address_2}}} {{{Address_3}}} {{{City}}} {{{State}}} {{{Zip}}}
+{{{Short_Lega}}}
+{{{Legal_Acre}}}
+{{{Taxable_Ac}}}
+{{{Tax_Code}}}
+{{{Tax_Area}}}
+{{{Land_Value}}}
+{{{Appraised_}}}
+{{{Curruse_Va}}}
+{{{Bldg_Value}}}
+{{{Use_Code}}}
+{{{Tax_Status}}}
+{{{Sale_date}}}
+{{{Sale_Price}}}{{/__full__}}]]></Parameter>
+</Parameters>
+
+
+<Style name="parcel" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <LineSymbolizer stroke="#559944" stroke-width="0.5" />
+    <PolygonSymbolizer fill-opacity="1" fill="#aaee88" />
+  </Rule>
+</Style>
+<Layer name="parcel"
+  srs="+proj=lcc +lat_1=47.5 +lat_2=48.73333333333333 +lat_0=47 +lon_0=-120.8333333333333 +x_0=500000.0000000001 +y_0=0 +datum=NAD83 +units=us-ft +no_defs">
+    <StyleName>parcel</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\Temp\create-utfgrid\data\Parcel_Link.shp]]></Parameter>
+       <Parameter name="id"><![CDATA[parcel]]></Parameter>
+       <Parameter name="project"><![CDATA[SJCparcels]]></Parameter>
+       <Parameter name="srs"><![CDATA[]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>

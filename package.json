@@ -1,0 +1,18 @@
+{
+  "name": "create-utfgrid",
+  "version": "0.1.0",
+  "description": "Create UTF grids with node-mapnik",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nick Peihl",
+  "license": "ISC",
+  "dependencies": {
+    "mapnik": "^3.4.10",
+    "mbtiles": "^0.8.2",
+    "sphericalmercator": "^1.0.4",
+    "tilelive": "^5.11.0",
+    "tilelive-mapnik": "^0.6.17"
+  }
+}
